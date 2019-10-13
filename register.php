@@ -52,6 +52,7 @@ if(isset($_POST['register']))
 
             $to = $email;
             $subject= WEB_SITE_NAME .' - ACTIVATION DE COMPTE';
+            $password = sha1($password);
             $token = sha1($pseudo.$email.$password) ;
 
 
@@ -65,23 +66,39 @@ if(isset($_POST['register']))
             'X-Mailer: PHP/' . phpversion();
 
 
-            mail($to, $subject,$content,$headers);
+             mail($to, $subject,$content,$headers);
 
             set_flash("un mail d'activation de compte vous a été envoyer","success" );
+
+            //le code sql
         
+            $q = $db->prepare('INSERT INTO users(name,pseudo, email, password)
+                                 VALUES(:name, :pseudo, :email, :password)');
+
+                    $q->execute([
+                            'name'=>$nom,
+                            'pseudo'=>$pseudo,
+                            'email'=>$email,
+                            'password'=>$password ,
+                    ]);
+
            
             redirect('index.php');
 
+        }else{
+            save_input_data();
         }
 
     }else{
 
         $errors[] = "Veuillez remplir s'il vous plait tous champs !";
 
-
+        save_input_data();
 
     }
 
+}else{
+    clear_input_data();
 }
 
 

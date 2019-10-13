@@ -11,7 +11,7 @@
     <p>
         Pour activer votre compte, veuillez cliquer sur le lien ci-dessous:
 
-        <a href="<?= WEB_SITE_URL.'/activation.php?user='.$pseudo.'&amp;token='.$token?>">Activer</a>
+        <a href="<?= WEB_SITE_URL.'/activation.php?user='.$pseudo.'&token='.$token?>">Activer</a>
     </p>
 </body>
 </html>
