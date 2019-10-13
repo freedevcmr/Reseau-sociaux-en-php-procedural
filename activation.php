@@ -27,7 +27,7 @@ if(!empty($_GET['user']) && is_already_in_use('pseudo',$_GET['user'],'users') &&
 
     $q->execute([$pseudo]);
     set_flash("felicitation votre compte est maintenant activer", "success");
-    redirect('index.php');
+    redirect('login.php');
     }else{
         set_flash("paramètre d'activation de compte invalide", "danger");
         redirect('index.php');

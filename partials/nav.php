@@ -5,13 +5,13 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item  <?= set_active('index') ?>">
         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login">Connexion</a>
+      <li class="nav-item <?= set_active('login') ?>">
+        <a class="nav-link" href="login.php">Connexion</a> 
       </li>
-      <li class="nav-item">
+      <li class="nav-item <?= set_active('register') ?>">
         <a class="nav-link " href="register.php">Inscription</a>
       </li>
     </ul>

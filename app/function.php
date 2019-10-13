@@ -105,6 +105,21 @@ if(!function_exists('e')){
         }
     }
 }
+
+//attibut la classe active sur le menu
+if(!function_exists('set_active')){
+    function set_active($file){
+      $page=  array_pop(explode('/',$_SERVER['SCRIPT_NAME']));
+
+      if($page == $file.'.php'){
+          return 'active';
+      }else{
+          return null;
+      }
+    }
+}
+
+
 // if(!function_exists('')){
 //     function 
 // }
