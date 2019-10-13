@@ -15,3 +15,4 @@
   </head>
   <body>
       <?php require "nav.php";?>
+      <?php require "flash.php";?>

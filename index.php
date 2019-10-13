@@ -1,4 +1,5 @@
 <?php
+session_start();
 $title = 'Home';
 
 require 'config/constant.php';

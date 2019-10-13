@@ -1,4 +1,5 @@
 <?php
+session_start();
 $title = 'Register';
 require 'config/constant.php';
 require 'config/database.php';
@@ -66,8 +67,10 @@ if(isset($_POST['register']))
 
             mail($to, $subject,$content,$headers);
 
-            echo "mail d'activation envoyé";
-
+            set_flash("un mail d'activation de compte vous a été envoyer","success" );
+        
+           
+            redirect('index.php');
 
         }
 
