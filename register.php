@@ -1,6 +1,7 @@
 <?php
 session_start();
 $title = 'Register';
+require 'app/guest_filter.php';
 require 'config/constant.php';
 require 'config/database.php';
 require 'app/function.php';

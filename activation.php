@@ -1,5 +1,6 @@
 <?php
 session_start();
+require 'app/guest_filter.php';
 require 'config/database.php';
 require 'app/function.php';
 

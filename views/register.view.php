@@ -9,7 +9,7 @@
 
 <div class="row">
     <div class="col-md-6">
-        <form class="well" method="POST" action="" data-parsley-validate>
+        <form class="card card-body bg-light" method="POST" action="" data-parsley-validate>
             <div class="form-group">
                 <label for="inputName">Nom</label>
                 <input type="text" data-parsley-trigger="change" class="form-control" required name="nom" value="<?=get_input_data('nom') ?>" id="inputName" aria-describedby="nameHelp" placeholder="Enter Nom">
@@ -35,7 +35,7 @@
                 <input type="password" required class="form-control" data-parsley-equalto="#inputpass" id="inputpassconfirm" name="passwordconfirm" placeholder="confirmer votre mot de passe">
             </div>
          
-            <button type="submit" name="register" class="btn btn-primary">Submit</button>
+            <button type="submit" name="register" class="btn btn-primary">Inscription</button>
         </form>
     </div>
 
