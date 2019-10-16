@@ -141,8 +141,9 @@ if(!function_exists('find_user_by_id')){
 
         $q->execute(['id'=>$id]);
 
-        $data = current($q->fetchAll(PDO::FETCH_OBJ));
+        $data = $q->fetch(PDO::FETCH_OBJ);
 
+     
         $q->closeCursor();
 
         return $data;

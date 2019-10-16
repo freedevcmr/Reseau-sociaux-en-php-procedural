@@ -44,7 +44,7 @@
             <div class="card-header h4"><strong>Completer mon profil</strong></div>
             <div class="card-body">
 
-            <form action="" method="post">
+            <form action="" method="POST" data-parsley-validate class="card card-body bg-light" >
 
                 <div class="row"> <!-- debut de la ligne  -->
                     <div class="col-md-6"><!-- debut de la  premiere colone  -->
@@ -102,14 +102,14 @@
                         
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Biographie</label>
-                            <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
+                            <textarea class="form-control rounded-0" name="biogra" id="exampleFormControlTextarea1" rows="10"></textarea>
                         </div>
 
 
                     </div>
 
                 </div><!-- fin de la ligne  -->
-                <input type="submit" value="mettre a jour" class="btn btn-primary"/>
+                <input type="submit" value="Mettre à jour" name="update" class="btn btn-primary"/>
             </form>
 
             </div>
