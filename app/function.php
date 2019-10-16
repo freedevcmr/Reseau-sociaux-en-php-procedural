@@ -120,6 +120,55 @@ if(!function_exists('set_active')){
 }
 
 
+if(!function_exists('get_session')){
+    function get_session($key)
+    {
+        if($key){
+            return !empty($_SESSION[$key])?
+                        e($_SESSION[$key])
+                        : null;
+        }
+    }
+}
+
+if(!function_exists('find_user_by_id')){
+
+    function find_user_by_id($id){
+
+         global $db;
+       
+        $q = $db->prepare('SELECT * FROM users WHERE id = :id');
+
+        $q->execute(['id'=>$id]);
+
+        $data = current($q->fetchAll(PDO::FETCH_OBJ));
+
+        $q->closeCursor();
+
+        return $data;
+
+    }
+}
+
+
+if(!function_exists('get_avatar')){
+    function get_avatar($email) {
+
+        $gravatar_url ="http://gravatar.com/avatar/".md5(strtolower(trim($email)));
+        return $gravatar_url; 
+    }
+  
+}
+
+
+//verifier que l'utilisateur est connecter
+if(!function_exists('is_auth(')){
+    function is_auth(){
+        return (bool) isset($_SESSION['user_id']);
+    }
+}
+
+
 // if(!function_exists('')){
 //     function 
 // }

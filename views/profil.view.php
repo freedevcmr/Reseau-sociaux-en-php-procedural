@@ -11,12 +11,27 @@
     <div class="col-md-6">
 
         <div class="card">
-            <div class="card-header h4"><strong>Profil  de <?= $_SESSION['pseudo'] ?></strong> </div>
+            <div class="card-header h4"><strong>Profil  de <?= $user->pseudo ?></strong> </div>
             <div class="card-body">Content
-                image<br>
-                pseudo<br>
-                Adress email<br>
+       
 
+        <div class="row"><!--debut de la ligne  -->
+            <div class="col-md-5">
+                <img src="<?= get_avatar($user->email) ?>" alt="image de profil de <?= e($user->pseudo) ?>" class="rounded" >
+
+            </div>
+
+           
+        </div><!--fin de la ligne  -->
+
+
+        <div class="row"> <!--debut de la ligne  -->
+            <div class="col-md-6">
+                <strong><?= e($user->pseudo) ?></strong><br>
+               <a href="mailto:<?= e($user->email) ?>"><strong><?= e($user->email) ?></strong></a> 
+            </div>
+        </div><!--fin de la ligne  -->
+              
             </div>
             
         </div>

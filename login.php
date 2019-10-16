@@ -31,7 +31,7 @@ if(isset($_POST['login']))
                     // die($user->id);
                     // ,$user->pseudo
 
-                    redirect('profil.php');
+                    redirect('profil.php?id='.$user->id);
                 }else{
                     set_flash('Combinaison Identifiant/Password incorrect','danger');
 
