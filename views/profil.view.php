@@ -80,19 +80,19 @@
 
                         <div class="form-group">
                             <label for="inputName">Nom</label>
-                            <input type="text" data-parsley-trigger="change" class="form-control" required name="nom" value="<?=get_input_data('nom') ?>" id="inputName"  placeholder="Enter Nom">
+                            <input type="text" data-parsley-trigger="change" class="form-control" required name="nom" value="<?= !empty(get_input_data('nom'))?get_input_data('nom'):$user->name ?>" id="inputName"  placeholder="Enter Nom">
                             
                         </div>
 
                         <div class="form-group">
                             <label for="inputCity">ville</label>
-                            <input type="text" data-parsley-trigger="change" class="form-control" required name="city" value="<?=get_input_data('city') ?>" id="inputcity"  placeholder="Enter ville">
+                            <input type="text" data-parsley-trigger="change" class="form-control" required name="city" value="<?= !empty(get_input_data('city'))? get_input_data('city'): $user->city?>" id="inputcity"  placeholder="Enter ville">
                             
                         </div>
 
                         <div class="form-group">
                             <label for="inputTwitter">twitter</label>
-                            <input type="text" data-parsley-trigger="change" class="form-control" required name="twitter" value="<?=get_input_data('twitter') ?>" id="inputTwitter" >
+                            <input type="text" data-parsley-trigger="change" class="form-control" required name="twitter" value="<?= !empty(get_input_data('twitter'))? get_input_data('twitter') : $user->twitter ?>" id="inputTwitter" >
                             
                         </div>
 
@@ -103,20 +103,20 @@
                     <div class="col-md-6"><!-- debut de la deuxième colone -->
                          <div class="form-group">
                             <label for="inputCountry">Pays</label>
-                            <input type="text" data-parsley-trigger="change" class="form-control" required name="country" value="<?=get_input_data('country') ?>" id="inputName"  placeholder="Enter votre pays">
+                            <input type="text" data-parsley-trigger="change" class="form-control" required name="country" value="<?= !empty(get_input_data('country'))? get_input_data('country'):$user->country ?>"  placeholder="Enter votre pays">
                          
                         </div>
                         <div class="form-group">
                             <label for="inputsexe">Sexe</label>
                             <select name="sexe" id="inputsexe" class="form-control" required name="country">
-                                <option value="H">Homme</option>
-                                <option value="F">Femme</option>
+                                <option value="H" <?= $user->sexe =="H"? "selected": null ?>>Homme</option>
+                                <option value="F" <?= $user->sexe =="F"? "selected": null ?> >Femme</option>
                             </select>
                     
                         </div>
                         <div class="form-group">
                             <label for="inputgit">Github</label>
-                            <input type="text" data-parsley-trigger="change" class="form-control" required name="github" value="<?=get_input_data('github') ?>" id="inputgit"  >
+                            <input type="text" data-parsley-trigger="change" class="form-control" required name="github" value="<?= !empty(get_input_data('github'))? get_input_data('github') : $user->github ?>" id="inputgit"  >
                             
                         </div>
                     </div><!-- fin de la deuxième colone -->
@@ -125,13 +125,13 @@
 
                         <div class="form-group">
                             <label for="inputboulot">
-                                <input type="checkbox"  name="boulot" id="inputboulot" >
+                                <input type="checkbox" <?= $user->available_for_hiring?"checked":null ?> name="boulot" id="inputboulot" >
                                 Disponible pour emploi?</label>
                         </div>
                         
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Biographie</label>
-                            <textarea class="form-control rounded-0" name="biogra" id="exampleFormControlTextarea1" rows="10"></textarea>
+                            <textarea class="form-control rounded-0" name="biogra" id="exampleFormControlTextarea1" rows="10"> <?= !empty(get_input_data('biogra'))?get_input_data('biogra'):e($user->bio) ?></textarea>
                         </div>
 
 

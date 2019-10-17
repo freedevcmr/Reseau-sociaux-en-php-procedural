@@ -65,6 +65,8 @@ if(isset($_POST['update']))
 
                 set_flash('felicitation votre profil a été mis a Jour','info'); 
 
+                redirect('profil.php?id='.$_SESSION['user_id']);
+
     }else{
         save_input_data();
         $errors[] =" Tous les champs marqués d'une * sont obligatoire";
