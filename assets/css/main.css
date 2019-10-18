@@ -59,7 +59,7 @@ pour la partie partage de code source
   resize: none;
   outline: none;
   overflow: hidden;
-  min-height: 350px;
+  /* min-height: 350px; */
 
 }
 

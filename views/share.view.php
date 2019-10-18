@@ -15,13 +15,13 @@
            
         <div class="form-group">
         <label for="content_code">Entrer le code source a partager</label>
-        <textarea class="form-control code-bg" name="code" id="content_code" rows="10"></textarea>
+        <textarea class="form-control code-bg" id="code" name="code" id="content_code" rows="10"></textarea>
         </div>
 
             <div class="btn-group">
                 
                 <button type="submit" name="share" class="btn btn-success">enregister</button>
-                <a href="#" class="btn btn-danger">Tout effacer</a>
+                <a href="share.php" class="btn btn-danger">Tout effacer</a>
             </div>
         </form>
     </div>
@@ -32,4 +32,15 @@
 
 
 
-<?php require 'partials/footer.php'; ?>
+<script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js" ></script>
+  
+    <script src="assets/js/taby.js" ></script>
+    <script src="assets/js/main.js" ></script>
+    <script>
+        $("#code").tabby();
+        $("#code").height($(window).height() -50) ;
+    </script>
+
+</body>
+</html>
