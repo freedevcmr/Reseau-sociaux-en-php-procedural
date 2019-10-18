@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+
 body{
     padding-top: 77px;
 }
@@ -43,4 +45,26 @@ textarea.parsley-error {
 
 /*******************************
 fin de css pour parsley
+*****************************/
+
+/*******************************
+pour la partie partage de code source
+*****************************/
+
+.form-group .code-bg{
+  font-family: 'Source Code Pro', monospace;
+  border:none;
+  background-color: #000;
+  color:#c5c5c5;
+  resize: none;
+  outline: none;
+  overflow: hidden;
+  min-height: 350px;
+
+}
+
+
+
+/*******************************
+fin la partie partage de code source
 *****************************/

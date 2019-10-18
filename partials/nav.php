@@ -14,6 +14,9 @@
         <li class="nav-item <?= set_active('profil') ?>">
           <a class="nav-link" href="<?= 'profil.php?id='.get_session('user_id') ?>">Profil</a> 
         </li>
+        <li class="nav-item <?= set_active('share') ?>">
+          <a class="nav-link" href="share.php">Partager</a> 
+        </li>
 
         <li class="nav-item">
           <a class="nav-link" href="logout.php">Deconnexion</a> 

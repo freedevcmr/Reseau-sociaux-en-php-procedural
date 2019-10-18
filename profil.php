@@ -30,18 +30,7 @@ if(isset($_POST['update']))
         // if(!empty($nom) && !empty($pseudo) && !empty($email) && !empty($password) && !empty($passwordconfirm) ){
             extract($_POST);
 
-            // var_dump([
-            //     'nom'=>$nom,
-            //     'city'=>$city,
-            //     'twitter'=>$twitter,
-            //     'country'=>$country,
-            //     'sexe'=>$sexe,
-            //     'github'=> $github,
-            //     'bio' => $biogra,
-            //     'boulot'=>!empty($boulot)?'1' :'0',
-            //     'id'=>$_SESSION['user_id']
-            // ]);
-            // die();
+         
             $q = $db->prepare('UPDATE users SET name= :nom, city = :city, twitter = :twitter ,
                                                 country = :country,  github = :github,
                                                 bio = :biogra,
