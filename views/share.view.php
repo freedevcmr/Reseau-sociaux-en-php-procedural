@@ -20,7 +20,7 @@
 
             <div class="btn-group">
                 
-                <button type="submit" name="share" class="btn btn-success">enregister</button>
+                <button type="submit" name="save" class="btn btn-success">enregister</button>
                 <a href="share.php" class="btn btn-danger">Tout effacer</a>
             </div>
         </form>
