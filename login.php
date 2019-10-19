@@ -14,7 +14,7 @@ if(isset($_POST['login']))
         // if(!empty($nom) && !empty($pseudo) && !empty($email) && !empty($password) && !empty($passwordconfirm) ){
             extract($_POST);
 
-            $q = $db->prepare('SELECT id,pseudo FROM users WHERE (pseudo = :indent || email = :indent) AND password = :password
+            $q = $db->prepare('SELECT id,pseudo,email FROM users WHERE (pseudo = :indent || email = :indent) AND password = :password
                                 AND active = "1" ');
                 $q->execute([
                     'indent'=>$identifiant,
@@ -28,6 +28,7 @@ if(isset($_POST['login']))
 
                     $_SESSION['user_id'] = $user->id;
                     $_SESSION['pseudo'] = $user->pseudo;
+                    $_SESSION['email'] = $user->email;
                     // die($user->id);
                     // ,$user->pseudo
 

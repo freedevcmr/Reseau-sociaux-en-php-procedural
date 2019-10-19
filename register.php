@@ -53,8 +53,8 @@ if(isset($_POST['register']))
 
             $to = $email;
             $subject= WEB_SITE_NAME .' - ACTIVATION DE COMPTE';
-            $password = sha1($password);
-            $token = sha1($pseudo.$email.$password) ;
+            $pass = sha1($password);
+            $token = sha1($pseudo.$email.$pass) ;
 
 
             ob_start();
@@ -80,7 +80,7 @@ if(isset($_POST['register']))
                             'name'=>$nom,
                             'pseudo'=>$pseudo,
                             'email'=>$email,
-                            'password'=>$password ,
+                            'password'=>$pass ,
                     ]);
 
            

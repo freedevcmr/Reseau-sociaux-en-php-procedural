@@ -68,3 +68,8 @@ pour la partie partage de code source
 /*******************************
 fin la partie partage de code source
 *****************************/
+
+.avatar-nav{
+  border-radius: 10.25rem !important;
+  max-height: 2.5rem;
+}

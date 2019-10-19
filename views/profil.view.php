@@ -17,7 +17,7 @@
 
         <div class="row"><!--debut de la ligne  -->
             <div class="col-md-5">
-                <img src="<?= get_avatar($user->email) ?>" alt="image de profil de <?= e($user->pseudo) ?>" class="rounded" >
+                <img src="<?= get_avatar($user->email,100) ?>" alt="image de profil de <?= e($user->pseudo) ?>" class="rounded" >
 
             </div>
 
@@ -66,7 +66,7 @@
 
     </div>
 
-
+        <?php if(!empty($_GET['id']) && $_GET['id'] == $_SESSION['user_id'] ): ?>
     <div class="col-md-6">
         
         <div class="card">
@@ -144,7 +144,7 @@
             </div>
         </div>
     </div>
-    
+    <?php endif ?>
 
 </div>
 
