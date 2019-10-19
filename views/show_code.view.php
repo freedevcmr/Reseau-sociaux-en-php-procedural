@@ -16,7 +16,8 @@
 
         <div class="form-group">
             <label for="content_code">Entrer le code source a partager</label>
-            <textarea class="form-control code-bg" id="code" name="code" id="content_code" rows="10"><?= $data->code ?></textarea>
+            <textarea class="form-control code-bg  prettifyprint linenums" id="code" name="code" id="content_code" rows="10"><?= e($data->code) ?>
+            </textarea>
         </div>
 
        
@@ -32,9 +33,12 @@
 
 <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js" ></script>
-  
+    <script src="assets/js/prettify.js"></script>
     
     <script src="assets/js/main.js" ></script>
+    <script>
+        prettyPrint();
+    </script>
    
 
 </body>
