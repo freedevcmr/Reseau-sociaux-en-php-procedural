@@ -15,7 +15,7 @@
            
         <div class="form-group">
         <label for="content_code">Entrer le code source a partager</label>
-        <textarea class="form-control code-bg" id="code" name="code" id="content_code" rows="10"></textarea>
+        <textarea class="form-control code-bg" id="code" name="code" id="content_code" rows="10"><?= $code ?></textarea>
         </div>
 
             <div class="btn-group">
@@ -29,8 +29,6 @@
 </div>
 
 </main>
-
-
 
 <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js" ></script>
