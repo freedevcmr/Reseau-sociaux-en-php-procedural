@@ -170,6 +170,12 @@ if(!function_exists('is_auth(')){
 }
 
 
+if(!function_exists('get_current_local')){
+    function get_current_local()
+    {
+        return $_SESSION['locale'];
+    }
+}
 // if(!function_exists('')){
 //     function 
 // }

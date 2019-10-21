@@ -6,7 +6,7 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav ml-auto mr-5">
       <li class="nav-item  <?= set_active('index') ?>">
-        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php"><?=  $menu['accueil'][$_SESSION['locale']] ?> <span class="sr-only">(current)</span></a>
       </li>
 
        <?php if(is_auth()) : ?>
