@@ -1,6 +1,8 @@
 <?php
 session_start();
 $title = 'Profil';
+require 'bootstrap/local.php';
+require 'local/nav.php';
 
 require 'app/auth_filter.php';
 require 'config/database.php';

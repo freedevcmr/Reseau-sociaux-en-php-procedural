@@ -28,7 +28,7 @@
               
 
               <div class="dropdown-ite divider" href="#"></div>
-              <a class="dropdown-item" href="logout.php">Deconnexion</a> 
+              <a class="dropdown-item" href="logout.php"><?=  $menu['deconnexion'][$_SESSION['locale']] ?></a> 
             </div>
           </li>
 
@@ -38,10 +38,10 @@
       <?php else: ?>
 
           <li class="nav-item <?= set_active('login') ?>">
-            <a class="nav-link" href="login.php">Connexion</a> 
+            <a class="nav-link" href="login.php"><?=  $menu['connexion'][$_SESSION['locale']] ?></a>  
           </li>
           <li class="nav-item <?= set_active('register') ?>">
-            <a class="nav-link " href="register.php">Inscription</a>
+            <a class="nav-link " href="register.php"><?=  $menu['inscription'][$_SESSION['locale']] ?></a>
           </li>
       <?php endif; ?>
     </ul>

@@ -1,5 +1,7 @@
 <?php
 session_start();
+require 'bootstrap/local.php';
+require 'local/nav.php';
 require 'app/auth_filter.php';
 $title = 'show code';
 require 'config/constant.php';

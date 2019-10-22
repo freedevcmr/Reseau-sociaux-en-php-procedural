@@ -1,5 +1,7 @@
 <?php
 session_start();
+require 'bootstrap/local.php';
+require 'local/nav.php';
 require 'app/guest_filter.php';
 $title = 'Login';
 require 'config/constant.php';
