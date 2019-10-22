@@ -176,6 +176,23 @@ if(!function_exists('get_current_local')){
         return $_SESSION['locale'];
     }
 }
+//ce function permet de hacher le mot de passe
+if(!function_exists('bcrypt_hasd_password')){
+    function bcrypt_hasd_password($value, $option= array())
+    {
+        $const = isset($option['rounds'])? $option['rounds'] : 10;
+
+        $hash = password_hash($value, PASSWORD_BCRYPT,array('const'=>$const));
+
+        if($hash === false)
+        {
+            throw new Exception("Bcrypt hashing n'est pas supporté");
+        }
+
+        return $hash;
+    }
+}
+
 // if(!function_exists('')){
 //     function 
 // }

@@ -55,7 +55,12 @@ if(isset($_POST['register']))
 
             $to = $email;
             $subject= WEB_SITE_NAME .' - ACTIVATION DE COMPTE';
-            $pass = sha1($password);
+            // $pass = sha1($password);
+            
+            //haschage du mot de passe en utilisant la fonction bcrypt
+            $pass = bcrypt_hasd_password($password);
+
+
             $token = sha1($pseudo.$email.$pass) ;
 
 
