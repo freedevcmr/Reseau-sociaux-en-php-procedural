@@ -4,17 +4,25 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav ml-auto mr-5">
-      <li class="nav-item  <?= set_active('index') ?>">
-        <a class="nav-link" href="index.php"><?=  $menu['accueil'][$_SESSION['locale']] ?> <span class="sr-only">(current)</span></a>
+    <ul class="navbar-nav">
+         <li class="nav-item  <?php //echo set_active('index') ?>">
+        <a class="nav-link" href="listuser.php"><?php //echo $menu['accueil'][$_SESSION['locale']] ?> Liste des utilisateurs</a>
       </li>
+
+    </ul>
+
+    
+    <ul class="navbar-nav ml-auto mr-5">
+      <!-- <li class="nav-item  <?php //echo set_active('index') ?>">
+        <a class="nav-link" href="index.php"><?php //echo $menu['accueil'][$_SESSION['locale']] ?> <span class="sr-only">(current)</span></a>
+      </li> -->
 
        <?php if(is_auth()) : ?>
 
         
 
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img src="<?= get_avatar(get_session('email')) ?>" alt="image de profil de <?= e(get_session('pseudo')) ?>" class="rounted avata-nav" >
 
           </a>

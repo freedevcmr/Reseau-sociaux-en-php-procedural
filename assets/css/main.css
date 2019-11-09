@@ -73,3 +73,11 @@ fin la partie partage de code source
   border-radius: 10.25rem !important;
   max-height: 2.5rem;
 }
+
+@media(min-width:768px)
+{
+  .navbar-expand-md .navbar-nav .dropdown-menu {
+    position: absolute;
+    left: -5rem;
+  }
+}
