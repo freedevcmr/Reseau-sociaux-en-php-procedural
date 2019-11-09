@@ -23,49 +23,49 @@ if(!empty($_GET['id'])){
     // redirect('profil.php?id='.$_SESSION['user_id']);
 }
 
-//si le formulaire est soumie
-if(isset($_POST['update']))
-{
+// //si le formulaire est soumie
+// if(isset($_POST['update']))
+// {
   
-    $errors=[]; 
-    if(not_empty(['nom','city','twitter','country','sexe','github','biogra']) ){
-        // if(!empty($nom) && !empty($pseudo) && !empty($email) && !empty($password) && !empty($passwordconfirm) ){
-            extract($_POST);
+//     $errors=[]; 
+//     if(not_empty(['nom','city','twitter','country','sexe','github','biogra']) ){
+//         // if(!empty($nom) && !empty($pseudo) && !empty($email) && !empty($password) && !empty($passwordconfirm) ){
+//             extract($_POST);
 
          
-            $q = $db->prepare('UPDATE users SET name= :nom, city = :city, twitter = :twitter ,
-                                                country = :country,  github = :github,
-                                                bio = :biogra,
-                                                sexe= :sexe,
-                                                available_for_hiring = :boulot
-                                         WHERE id =:id');
-                $q->execute([
-                    'nom'=>$nom,
-                    'city'=>$city,
-                     'twitter'=>$twitter,
-                    'country'=>$country,
-                    'github'=> $github,
-                    'biogra' => $biogra,
-                    'sexe'=>$sexe,
-                    'boulot'=>!empty($boulot)?'1' :'0',
+//             $q = $db->prepare('UPDATE users SET name= :nom, city = :city, twitter = :twitter ,
+//                                                 country = :country,  github = :github,
+//                                                 bio = :biogra,
+//                                                 sexe= :sexe,
+//                                                 available_for_hiring = :boulot
+//                                          WHERE id =:id');
+//                 $q->execute([
+//                     'nom'=>$nom,
+//                     'city'=>$city,
+//                      'twitter'=>$twitter,
+//                     'country'=>$country,
+//                     'github'=> $github,
+//                     'biogra' => $biogra,
+//                     'sexe'=>$sexe,
+//                     'boulot'=>!empty($boulot)?'1' :'0',
                     
-                    'id'=>$_SESSION['user_id']
-                ]);
+//                     'id'=>$_SESSION['user_id']
+//                 ]);
 
 
 
-                set_flash('felicitation votre profil a été mis a Jour','info'); 
+//                 set_flash('felicitation votre profil a été mis a Jour','info'); 
 
-                redirect('profil.php?id='.$_SESSION['user_id']);
+//                 redirect('profil.php?id='.$_SESSION['user_id']);
 
-    }else{
-        save_input_data();
-        $errors[] =" Tous les champs marqués d'une * sont obligatoire";
-    }
+//     }else{
+//         save_input_data();
+//         $errors[] =" Tous les champs marqués d'une * sont obligatoire";
+//     }
 
-}else{
-    clear_input_data();
-}
+// }else{
+//     clear_input_data();
+// }
 
 
 require 'views/profil.view.php';

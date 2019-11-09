@@ -21,10 +21,11 @@
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               
 
-              <a class="dropdown-item <?= set_active('profil') ?>" href="<?= 'profil.php?id='.get_session('user_id') ?>">Profil</a> 
+              <a class="dropdown-item <?= set_active('edituser') ?>" href="<?= 'edituser.php?id='.get_session('user_id') ?>"><?=  $menu['edit_user'][$_SESSION['locale']] ?> </a> 
+              <a class="dropdown-item <?= set_active('profil') ?>" href="<?= 'profil.php?id='.get_session('user_id') ?>"><?=  $menu['mon_profil'][$_SESSION['locale']] ?></a> 
             
              
-              <a class="dropdown-item <?= set_active('share') ?>" href="share.php">Partager</a> 
+              <a class="dropdown-item <?= set_active('share') ?>" href="share.php"><?=  $menu['share'][$_SESSION['locale']] ?></a> 
               
 
               <div class="dropdown-ite divider" href="#"></div>
