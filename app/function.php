@@ -193,6 +193,21 @@ if(!function_exists('bcrypt_hasd_password')){
     }
 }
 
+if(!function_exists('redirect_interne')){
+    function redirect_interne($default_url)
+    {
+        if($_SESSION['forwarding_url']){
+            $url = $_SESSION['forwarding_url'];
+        }else{
+            $url = $default_url;
+        }
+
+        $_SESSION['forwarding_url']=null;
+        redirect($url);
+    }
+}
+
+
 // if(!function_exists('')){
 //     function 
 // }

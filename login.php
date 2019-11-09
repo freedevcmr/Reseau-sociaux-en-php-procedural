@@ -41,9 +41,10 @@ if(isset($_POST['login']))
                     $_SESSION['pseudo'] = $user->pseudo;
                     $_SESSION['email'] = $user->email;
                     // die($user->id);
-                    // ,$user->pseudo
+                    // ,$user->pseudo 
 
-                    redirect('profil.php?id='.$user->id);
+                    // redirect('profil.php?id='.$user->id);
+                    redirect_interne('profil.php?id='.$user->id);
                 }else{
                     set_flash('Combinaison Identifiant/Password incorrect','danger');
 
