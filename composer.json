@@ -1,0 +1,13 @@
+{
+    "name": "stephane/reseau",
+    "authors": [
+        {
+            "name": "Stephane Dzefo",
+            "email": "fredicm25@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "fzaninotto/faker": "^1.8"
+    }
+}

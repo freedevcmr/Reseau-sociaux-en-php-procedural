@@ -1,4 +1,11 @@
 <?php 
+
+// if(!function_exists('dd')){
+//     function dd($data,... )
+//     {
+
+//     }
+// }
 //cette function verifie que les champs sont remplies
 if(!function_exists('not_empty'))
 {
